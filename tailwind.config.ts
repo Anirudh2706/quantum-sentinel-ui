@@ -31,6 +31,14 @@ export default {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
@@ -58,6 +66,21 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      backgroundImage: {
+        "gradient-quantum": "var(--gradient-quantum)",
+        "gradient-cyber": "var(--gradient-cyber)",
+        "gradient-threat": "var(--gradient-threat)",
+        "gradient-safe": "var(--gradient-safe)",
+      },
+      boxShadow: {
+        "quantum": "var(--shadow-quantum)",
+        "purple": "var(--shadow-purple)",
+        "card": "var(--shadow-card)",
+      },
+      transitionProperty: {
+        "quantum": "var(--transition-quantum)",
+        "glow": "var(--transition-glow)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -84,6 +107,9 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "quantum-pulse": "quantum-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "quantum-spin": "quantum-spin 3s linear infinite",
+        "quantum-glow": "quantum-glow 3s ease-in-out infinite",
       },
     },
   },

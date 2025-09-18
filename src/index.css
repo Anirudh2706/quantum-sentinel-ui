@@ -2,41 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Quantum Enhanced Cybersecurity Design System
+All colors MUST be HSL. Quantum-themed with professional security aesthetics.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core quantum colors */
+    --background: 222 47% 4%;
+    --foreground: 200 100% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card system */
+    --card: 220 39% 8%;
+    --card-foreground: 200 100% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover */
+    --popover: 220 39% 8%;
+    --popover-foreground: 200 100% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Quantum primary - electric cyan */
+    --primary: 187 100% 50%;
+    --primary-foreground: 222 47% 4%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - quantum purple */
+    --secondary: 258 100% 65%;
+    --secondary-foreground: 200 100% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted tones */
+    --muted: 217 19% 15%;
+    --muted-foreground: 200 20% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - electric blue */
+    --accent: 210 100% 60%;
+    --accent-foreground: 222 47% 4%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive - quantum red */
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 200 100% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Success - quantum green */
+    --success: 120 100% 50%;
+    --success-foreground: 222 47% 4%;
 
-    --radius: 0.5rem;
+    /* Warning - quantum orange */
+    --warning: 35 100% 60%;
+    --warning-foreground: 222 47% 4%;
+
+    /* Borders and inputs */
+    --border: 217 19% 20%;
+    --input: 217 19% 15%;
+    --ring: 187 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Quantum gradients */
+    --gradient-quantum: linear-gradient(135deg, hsl(187 100% 50%), hsl(258 100% 65%));
+    --gradient-cyber: linear-gradient(90deg, hsl(187 100% 50% / 0.1), hsl(258 100% 65% / 0.1));
+    --gradient-threat: linear-gradient(135deg, hsl(0 100% 60%), hsl(35 100% 60%));
+    --gradient-safe: linear-gradient(135deg, hsl(120 100% 50%), hsl(187 100% 50%));
+
+    /* Shadows with quantum glow */
+    --shadow-quantum: 0 0 30px hsl(187 100% 50% / 0.3);
+    --shadow-purple: 0 0 30px hsl(258 100% 65% / 0.3);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
+
+    /* Animations */
+    --transition-quantum: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.3s ease;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +88,34 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Enhanced dark mode with deeper quantum tones */
+    --background: 222 47% 2%;
+    --foreground: 200 100% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 39% 6%;
+    --card-foreground: 200 100% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 39% 6%;
+    --popover-foreground: 200 100% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 187 100% 60%;
+    --primary-foreground: 222 47% 2%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 258 100% 70%;
+    --secondary-foreground: 200 100% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217 19% 12%;
+    --muted-foreground: 200 20% 75%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 210 100% 65%;
+    --accent-foreground: 222 47% 2%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 100% 65%;
+    --destructive-foreground: 200 100% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 217 19% 18%;
+    --input: 217 19% 12%;
+    --ring: 187 100% 60%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +133,66 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: radial-gradient(circle at 20% 80%, hsl(187 100% 50% / 0.05) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, hsl(258 100% 65% / 0.05) 0%, transparent 50%);
+  }
+
+  /* Quantum glow effects */
+  .quantum-glow {
+    box-shadow: var(--shadow-quantum);
+  }
+
+  .purple-glow {
+    box-shadow: var(--shadow-purple);
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-lg;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent;
+  }
+
+  /* Quantum animations */
+  @keyframes quantum-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  @keyframes quantum-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes quantum-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(187 100% 50% / 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(187 100% 50% / 0.6), 0 0 60px hsl(258 100% 65% / 0.3);
+    }
+  }
+
+  .animate-quantum-pulse {
+    animation: quantum-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-quantum-spin {
+    animation: quantum-spin 3s linear infinite;
+  }
+
+  .animate-quantum-glow {
+    animation: quantum-glow 3s ease-in-out infinite;
   }
 }
